@@ -1,9 +1,14 @@
 'use strict';
 
-const whoAmI = function(name, age) {
-  let yearOfBirth = 2018 - age;
-  console.log('Hi, my name is Julie and I\'m 29 years old');
-  console.log('I was born in ' + yearOfBirth);
+const yearOfBirth = function(age) {
+  return 2018 - age;
 };
 
-whoAmI();
+const whoAmI = function(name, age) {
+  let yob = yearOfBirth(age);
+  console.log(`Hi, my name is ${name} and I\'m ${age} years old`);
+  console.log(`I was born in ${yob}`);
+};
+
+
+whoAmI("Chris", 40);
